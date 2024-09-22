@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source License Chooser</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Open Source License Chooser</h1>
+        <div class="language-selector">
+            <button id="en-btn" class="active">English</button>
+            <button id="zh-btn">中文</button>
+        </div>
+    </header>
+    <main>
+        <div id="questions">
+            <h2 id="questions-title">Please answer the following questions:</h2>
+            <form id="license-form">
+                <div class="question">
+                    <label for="commercial" id="label-commercial">1. Do you allow commercial use?</label>
+                    <select id="commercial" required>
+                        <option value="">Please select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="modify" id="label-modify">2. Do you allow modifications and derivative works?</label>
+                    <select id="modify" required>
+                        <option value="">Please select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="distribute" id="label-distribute">3. Do you allow distribution?</label>
+                    <select id="distribute" required>
+                        <option value="">Please select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="sublicense" id="label-sublicense">4. Do you allow sublicensing?</label>
+                    <select id="sublicense" required>
+                        <option value="">Please select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="private-use" id="label-private-use">5. Do you allow private use?</label>
+                    <select id="private-use" required>
+                        <option value="">Please select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="patent-use" id="label-patent-use">6. Do you want to grant patent use?</label>
+                    <select id="patent-use" required>
+                        <option value="">Please select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+        </div>
+        <div id="result" class="hidden">
+            <h2 id="result-title">Recommended License:</h2>
+            <p id="recommended-license"></p>
+            <p id="license-description"></p>
+            <a id="license-link" href="#" target="_blank" rel="noopener noreferrer">Learn more about this license</a>
+            <button id="reset" class="secondary-btn">Choose Again</button>
+        </div>
+    </main>
+    <footer>
+        <p id="footer-text">© 2023 Open Source License Chooser. This tool is for reference only and does not constitute legal advice.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
